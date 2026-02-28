@@ -4,7 +4,7 @@ import joblib
 import time
 
 # Load model once
-model = joblib.load("occupancy_model.pkl")
+joblib.load("model/occupancy_model.pkl")
 
 
 def run_inference(hour, day_encoded, is_lab, scheduled_class, building):
