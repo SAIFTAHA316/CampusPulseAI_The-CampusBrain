@@ -3,8 +3,8 @@ import numpy as np
 import joblib
 import time
 
-# Load model once
-joblib.load("model/occupancy_model.pkl")
+# ✅ Load model once globally
+model = joblib.load("model/occupancy_model.pkl")
 
 
 def run_inference(hour, day_encoded, is_lab, scheduled_class, building):
@@ -19,7 +19,7 @@ def run_inference(hour, day_encoded, is_lab, scheduled_class, building):
 
     input_df = pd.DataFrame({
         "hour": [hour],
-        "day": [day_encoded],
+        "day_of_week": [day_encoded],   # ⚠ must match training column name
         "is_lab": [is_lab],
         "scheduled_class": [scheduled_class],
     })
