@@ -136,6 +136,18 @@ Impact Analytics + Optimization Logic
 ↓
 Actionable Recommendations
 
+## 🏗 System Architecture
+
+![CampusPulse Architecture](architecture.png)
+
+The system follows a clean AI pipeline:
+
+1. Data ingestion (sensor + schedule simulation)
+2. Feature engineering
+3. LightGBM occupancy model
+4. Real-time inference engine
+5. Smart recommendation layer
+6. Interactive dashboard visualization
 
 
 📂 Project Structure
