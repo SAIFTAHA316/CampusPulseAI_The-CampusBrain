@@ -4,7 +4,7 @@ import numpy as np
 import plotly.express as px
 import time
 import json
-
+from inference_engine import model
 
 # =============================
 # 🔄 Live Refresh Engine (NEW)
